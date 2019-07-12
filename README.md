@@ -48,7 +48,9 @@ and Rotation matrix which is rotates body frame to global frame,
 
 attitude.Rotate_BtoI(<V3F>) function is used to rotate accelaration body frame to global frame.
 
-![animation](images/step_3_1st_scenerio.gif.png)
+**Simulator Output:**
+
+![animation](images/step_3_1st_scenerio.gif)
 
 3.2: Covariance Prediction
 We should took the Jacobian of g for linear approximation,
@@ -80,10 +82,10 @@ After implemeting ```UpdateFromMag``` function then I've tuned QYawStd parameter
 ```
 PASS: ABS(Quad.Est.E.Yaw-0.000000) was less than Quad.Est.S.Yaw for 82% of the time
 ```
+**Simulator Output:**
+
 ![](images/step_4_yaw_error.png)
 
-END OF STEP #2 -  @REMOVE_BEFORE_SUBMISSION
------
 
 ### Step 5: Closed Loop + GPS Update ###
 
@@ -100,7 +102,12 @@ Then the partial derivative is the identity matrix:
 
 
 implementation can be found in ```UpdateFromGPS``` function.
+
+**Simulator Output:**
+![](images/step_5.gif)
+
 ***Success criteria:*** *Your objective is to complete the entire simulation cycle with estimated position error of < 1m.*
+**Result:**
 
 ```
 PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
@@ -110,8 +117,11 @@ PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
 ### Step 6: Adding Your Controller ###
 
 In this step, I've replaced QuadController.cpp and QuadControlParams.txt with my own code, then ran `11_GPSUpdate`. After first failure, 30% decreasing position gains makes me pass.
+**Simulator Output:**
+![](images/step_6.gif)
 
 ***Success criteria:*** *Your objective is to complete the entire simulation cycle with estimated position error of < 1m.*
+**Result:**
 
 ```
 PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
