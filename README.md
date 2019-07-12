@@ -1,8 +1,35 @@
 # Estimation Project #
 
+### Step 1: Sensor Noise ###
+In this step, simulator is generated some noisy sensor data. Using notebook 
+[Find_StdDev](
+https://github.com/burkea/FCND-Estimation-CPP/blob/master/python/Find_StdDev.ipynb) calculate standart deviation of these sensor readings.
+
+***Success criteria:*** *Your standard deviations should accurately capture the value of approximately 68% of the respective measurements.*
+
+**Simulator Output:**
+
+![](images/step_1_screenshot.png)
+
+**Result:**
+
+![Result](images/step_1_result.png)
+
+
+END OF STEP #1 -  @REMOVE_BEFORE_SUBMISSION
+-----
+
+
+
+
+
+# Estimation Project #
+
+
 Welcome to the estimation project.  In this project, you will be developing the estimation portion of the controller used in the CPP simulator.  By the end of the project, your simulated quad will be flying with your estimator and your custom controller (from the previous project)!
 
 This README is broken down into the following sections:
+
 
  - [Setup](#setup) - the environment and code setup required to get started and a brief overview of the project structure
  - [The Tasks](#the-tasks) - the tasks you will need to complete for the project
