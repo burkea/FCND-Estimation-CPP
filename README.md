@@ -16,9 +16,26 @@ https://github.com/burkea/FCND-Estimation-CPP/blob/master/python/Find_StdDev.ipy
 ![Result](images/step_1_result.png)
 
 
-END OF STEP #1 -  @REMOVE_BEFORE_SUBMISSION
------
 
+### Step 2: Attitude Estimation ###
+
+In this scenario we need to include IMU measurements to the result state. We need a better integration method that using the current attitude estimate (rollEst, pitchEst and ekfState(6)) to integrate the body rates into new Euler angles
+
+I've used class Quaternion<float> with and methods FromEuler123_RPY and IntegrateBodyRate methods to implement it.
+
+***Success criteria:*** *Your attitude estimator needs to get within 0.1 rad for each of the Euler angles for at least 3 seconds.*
+
+**Simulator Output:**
+
+![](images/step_2_screenshot.png)
+
+**Result:**
+
+![Result](images/step_2_result.png)
+
+
+END OF STEP #2 -  @REMOVE_BEFORE_SUBMISSION
+-----
 
 
 
